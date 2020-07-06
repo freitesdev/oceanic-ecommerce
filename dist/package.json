@@ -1,0 +1,19 @@
+{
+  "name": "oceanic-kitchen",
+  "version": "1.0.0",
+  "description": "E-commerce for Oceanic Kitchen",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Andres Freites",
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^5.2.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.9.21",
+    "wa-mediabox": "^1.0.1"
+  }
+}
