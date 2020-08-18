@@ -6,7 +6,7 @@ const Product = require('../../models/product.model')
 // Route GET api/products
 // GET all products
 // access PUBLIC
-router.route('/').get((req, res) => {
+router.route('/products').get((req, res) => {
     Product.find()
         .sort({ date: -1 })
         .then(products => res.json(products))

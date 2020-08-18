@@ -45,7 +45,7 @@ function Cart(){
                 key={key}
                 style={props}
                 className="shopping bg-dark container"
-              >
+                >
                 <h1>Im the shopping list</h1>
               </animated.div>
             )

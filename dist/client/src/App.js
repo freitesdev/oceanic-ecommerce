@@ -9,6 +9,7 @@ import Footer from './components/Footer.component';
 import Account from './views/Account.view'
 import Contact from './views/Contact.view'
 import Home from './views/Home.view'
+import Orders from './views/Orders.view'
 import Products from './views/Products.view'
 
 import { Provider } from 'react-redux';
@@ -19,23 +20,25 @@ function App() {
     <Router>
       <div className="App">
         <Header />
-          <div className="container">
-            <h1>Hello</h1>
-            <Switch>
-              <Route exact path="/">
-                <Home />
-              </Route>
-              <Route exact path="/account">
-                <Account />
-              </Route>
-              <Route exact path="/products">
-                <Products />
-              </Route>
-              <Route exact path="/contact">
-                <Contact />
-              </Route>
-            </Switch>
-          </div>
+        <div className="container">
+          <Switch>
+            <Route exact path="/">
+              <Home />
+            </Route>
+            <Route exact path="/account">
+              <Account />
+            </Route>
+            <Route exact path="/orders">
+              <Orders />
+            </Route>
+            <Route exact path="/products">
+              <Products />
+            </Route>
+            <Route exact path="/contact">
+              <Contact />
+            </Route>
+          </Switch>
+        </div>
         <Footer />
       </div>
     </Router>
