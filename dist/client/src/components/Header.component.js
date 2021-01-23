@@ -1,9 +1,5 @@
 import React, { useState } from "react";
-import {
-  BrowserRouter as Router,
-
-  Link
-} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import {
   Collapse,
   Navbar,
@@ -22,7 +18,7 @@ const Header = (props) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggle = () => setIsOpen(!isOpen);
-  let session, middleware,sessionWord="Login/Logout"
+  let sessionWord="Login/Logout"
 
   return (
     <header>

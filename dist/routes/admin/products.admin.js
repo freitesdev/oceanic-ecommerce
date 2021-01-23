@@ -18,7 +18,7 @@ Product.findById(req.params.id)
         .catch(err => res.status(400).json({ success: false, error: err }));
 });
 router.route('/add').post((req, res) => {
-    const name = req.body.name, description = req.body.description, price = Number(req.body.price), category = req.body.category, capacity = req.body.capacity, image = req.body.image, date = Date.parse(new Date());
+    const name = req.body.name, description = req.body.description, weigth = req.body.weigth, price = Number(req.body.price), category = req.body.category, capacity = req.body.capacity, image = req.body.image, date = Date.parse(new Date()), voltage = req.body.voltage, size = req.body.size;
     const newProduct = new Product({
         description,
         name,
@@ -26,7 +26,10 @@ router.route('/add').post((req, res) => {
         category,
         capacity,
         image,
-        date
+        date,
+        voltage,
+        size,
+        weigth
     });
     newProduct.save()
         .then(() => res.json({
@@ -45,14 +48,14 @@ router.route('/:id').delete((req, res) => {
 });
 router.route('/update/:id').post((req, res) => {
     Product.findByIdAndUpdate(req.params.id)
-        .then(product => {
-            product.name = req.body.name;
-            product.description = req.body.description;
-            product.price = req.body.price;
-            product.category = req.body.capacity;
-            product.image = req.body.image;
+        .then(Product => {
+            Product.name = req.body.name;
+            Product.description = req.body.description;
+            Product.price = req.body.price;
+            Product.category = req.body.capacity;
+            Product.image = req.body.image;
 
-            product.save()
+            Product.save()
                 .then(() => res.json({
                     success: true,
                     description: 'Product updated'

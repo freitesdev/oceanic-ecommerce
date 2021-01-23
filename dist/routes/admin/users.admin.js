@@ -1,6 +1,6 @@
 const router = require('express').Router();
 //Order Model Require
-const User = require('../../models/user.model')
+let User = require('../../models/user.model')
 // Route GET admin/users
 // GET all users
 // access PRIVATE

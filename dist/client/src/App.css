@@ -40,6 +40,16 @@ footer{
 }
 .product{
   margin-bottom: 10px;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 2rem;
+  align-items: flex-start;
+  justify-content: center;
+  padding-bottom: 10px;
+  max-width: 1100px;
+  margin: auto;
+  overflow: hidden;
+  padding: 1rem 2rem;
 }
 /* Media Queries */
 @media(max-width: 768px){
@@ -51,6 +61,9 @@ footer{
   .logo{
       max-width: 200px;
       min-width: 120px;
+  }
+  .product{
+    grid-template-columns: 1fr;
   }
 }
 @media(min-width: 768px){
