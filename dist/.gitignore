@@ -2,6 +2,7 @@
 
 # env
 .env
+dist/.env
 
 # dependencies
 /node_modules
